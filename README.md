@@ -5,6 +5,8 @@ Each benchark uses a different lock and a different proportion of readers and wr
 
 If you have any reservations about the validity of the benchmark (benchmarks are hard), please open an issue in this repo.
 
+Summary organaized by lock:
+
 	Benchmark                                  Mode  Cnt      Score     Error  Units
 	LockBenchmark.readwrite_r0_w100            avgt   25  16509.112 ± 188.460  us/op
 	LockBenchmark.readwrite_r100_w0            avgt   25   7561.638 ± 613.479  us/op
@@ -32,6 +34,39 @@ If you have any reservations about the validity of the benchmark (benchmarks are
 	LockBenchmark.synchronized_r80_w20         avgt   25  11450.740 ± 139.611  us/op
 	LockBenchmark.synchronized_r90_w10         avgt   25  10172.275 ±  97.704  us/op
 	
+Summary organaized by benchmark, sorted by score:
+
+	Benchmark                                  Mode  Cnt      Score     Error  Units
+	LockBenchmark.stamped_r0_w100              avgt   25  11508.145 ± 599.651  us/op
+	LockBenchmark.synchronized_r0_w100         avgt   25  15404.589 ± 160.709  us/op
+	LockBenchmark.reentrant_r0_w100            avgt   25  15732.678 ± 554.701  us/op
+	LockBenchmark.spin_r0_w100                 avgt   25  16296.223 ± 351.788  us/op
+	LockBenchmark.readwrite_r0_w100            avgt   25  16509.112 ± 188.460  us/op
+	
+	LockBenchmark.stamped_r50_w50              avgt   25   8990.532 ± 408.712  us/op
+	LockBenchmark.spin_r50_w50                 avgt   25  13065.895 ± 155.809  us/op
+	LockBenchmark.synchronized_r50_w50         avgt   25  13890.215 ± 261.045  us/op
+	LockBenchmark.reentrant_r50_w50            avgt   25  15439.426 ± 397.694  us/op
+	LockBenchmark.readwrite_r50_w50            avgt   25  16321.811 ± 211.794  us/op
+
+	LockBenchmark.stamped_r80_w20              avgt   25   5870.741 ±  96.738  us/op
+	LockBenchmark.spin_r80_w20                 avgt   25  10431.370 ± 371.228  us/op
+	LockBenchmark.synchronized_r80_w20         avgt   25  11450.740 ± 139.611  us/op
+	LockBenchmark.readwrite_r80_w20            avgt   25  12357.781 ± 189.023  us/op
+	LockBenchmark.reentrant_r80_w20            avgt   25  15051.987 ± 210.090  us/op
+	
+	LockBenchmark.stamped_r90_w10              avgt   25   4337.439 ±  71.332  us/op
+	LockBenchmark.spin_r90_w10                 avgt   25   9390.915 ± 465.028  us/op
+	LockBenchmark.synchronized_r90_w10         avgt   25  10172.275 ±  97.704  us/op
+	LockBenchmark.readwrite_r90_w10            avgt   25  11286.269 ± 328.912  us/op
+	LockBenchmark.reentrant_r90_w10            avgt   25  14902.399 ± 115.543  us/op
+	
+	LockBenchmark.stamped_r100_w0              avgt   25    863.142 ±  29.717  us/op
+	LockBenchmark.spin_r100_w0                 avgt   25   7103.558 ± 327.008  us/op
+	LockBenchmark.readwrite_r100_w0            avgt   25   7561.638 ± 613.479  us/op
+	LockBenchmark.synchronized_r100_w0         avgt   25   8564.822 ±  65.918  us/op
+	LockBenchmark.reentrant_r100_w0            avgt   25  14586.118 ± 153.174  us/op
+
 # Full results:
 
 	# JMH version: 1.21
